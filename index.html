@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A engineer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="inicio" class="home">
+      <canvas id="bg-canvas"></canvas>
+      <div class="home-content">
+        <h1><span id="typed-text"></span></h1>
+        <p>Desarrollador de Software</p>
+        <div class="scroll-links">
+          <a href="#proyectos" class="btn">Proyectos</a>
+          <a href="#about" class="btn">Sobre mi</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="projects">
+      <h2>Proyectos</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="./assets/images/reloj.webp" alt="Proyecto 1" />
+          <h3>Reloj Digital</h3>
+          <p>
+            Proyecto sencillo sobre un reloj digital creado con html, css y
+            javascript. Muestra la hora actual en formato HH:MM:SS y se
+            actualiza en tiempo real.
+          </p>
+          <a href="https://github.com/guesj0/Reloj-Digital" class="btn"
+            >Ver en GitHub</a
+          >
+        </div>
+
+        <div class="project-card">
+          <img src="./assets/images/tienda.webp" alt="Proyecto 2" />
+          <h3>Gestión de Tiendas</h3>
+          <p>
+            Proyecto web completo para la administración de tiendas, productos y
+            empleados, utilizando Node.js, Express y MongoDB. La aplicación
+            permite realizar operaciones CRUD en cada uno de estos módulos, e
+            incluye un sistema de autenticación de usuarios.
+          </p>
+          <a href="https://github.com/guesj0/web-express" class="btn"
+            >Ver en GitHub</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Sobre Mí</h2>
+      <p>
+        Soy un desarrollador junior back-end. Mi mayor interes se encuentra en
+        diseñar y construir aplicaciones robustas y escalables, optimizar el
+        rendimiento de bases de datos y crear API REST eficientes. Mi enfoque se
+        centra en la lógica del servidor, la seguridad de la información y la
+        integración de tecnologías modernas para ofrecer soluciones de alto
+        rendimiento.
+      </p>
+    </section>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/guesj0"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sebastian-diaz-7421b334a/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

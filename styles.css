@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: rgb(24, 26, 27);
+  color: #fff;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+#bg-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+}
+
+#typed-text {
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 5px;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+.projects {
+  padding: 5rem 2rem;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 1.5rem;
+  background-color: #2c2f33;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 0.7rem;
+}
+
+.project-card p {
+  flex-grow: 1;
+
+  margin: 1rem 0;
+}
+
+.project-card .btn {
+  align-self: center;
+  margin-top: auto;
+}
+
+#about {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  text-align: start;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem;
+  background: #0077b6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+  margin-top: 5px;
+}
+
+.btn:hover {
+  background: #023e8a;
+}
+
+.scroll-links .btn {
+  background: none;
+  color: #0077b6;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.scroll-links .btn::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #0077b6;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+}
+
+.scroll-links .btn:hover::after {
+  width: 100%;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #333;
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.project-card,
+.about {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.project-card.active,
+.about.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 2.5rem;
+  }
+  .home p {
+    font-size: 1rem;
+  }
+  .projects,
+  .about {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 2rem;
+  }
+  .home p {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .project-grid {
+    flex-direction: column;
+  }
+}
